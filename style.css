@@ -163,13 +163,14 @@ body {
 
 .footer-title a {
   text-decoration: none;
-  color: #fff;
+  color: #4FC3F7;
 }
 
 .footer-title a:hover {
   transition: color .5s;
   color: #12c0b299;
 }
+
 
 /* 400px / 16 px = 25em */
 @media screen and (min-width: 25em) {
