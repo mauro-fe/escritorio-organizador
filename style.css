@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Roboto+Condensed:wght@100;300;500;700&display=swap');
+
+* {
+  color: #fff;
+}
+
+:root {
+  --font-primary: 'Roboto Condensed', sans-serif;
+  --color-primary: #b4ffff;
+  --color-secundary: #000;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-primary);
+}
+
+body {
+  background-image: linear-gradient(to left, #89C2D9 1%, #0077B6 5% 95%, #89C2D9);
+  /* background-repeat: ; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: .9rem;
+}
+
+.maxWidth {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-bottom: 5em;
+}
+
+.main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_socialMedia-header {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header_foto-perfil {
+  display: inline-block;
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  margin-top: 1em;
+  transition: transform 1.5s ease-in-out;
+}
+
+.header_foto-perfil .aumentar-diminuir {
+  transform: translateY(120px) scale(180%);
+}
+
+.main_socialMedia-name {
+  font-size: 4em;
+  color: #fff;
+  filter: drop-shadow(2px 2px 2px #22ddd288);
+  line-height: 1.2;
+  border-bottom: 2px solid var(--color-primary);
+  margin-top: .5em;
+  margin-bottom: 0;
+}
+
+.main_socialMedia-title::after {
+  content: "Redes Sociais";
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 1px var(--color-primary);
+  text-shadow: 3px 3px 5px var(--color-secundary);
+  padding: .4em .5em;
+  color: var(--color-primary);
+  font-size: 2em;
+  cursor: not-allowed;
+}
+
+.main_list_socialMedia {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+  margin-bottom: 0;
+  flex: 1 2 auto;
+}
+
+.main_list_socialMedia li {
+  margin: 3.6em 0;
+}
+
+.main_list_socialMedia span::after {
+  content: "Discord: ";
+}
+
+.main_list_socialMedia a,
+.main_list_socialMedia .discord {
+  display: block;
+  padding: .5em 0;
+  text-decoration: none;
+  /* background-color: transparent; */
+  background-color: #0003;
+  border-radius: 20px;
+  font-size: 2.5em;
+  letter-spacing: 4px;
+  font-weight: 400;
+  border: 2px solid var(--color-primary);
+  box-shadow: -6px 6px 2px #fff9;
+  transition: background-color .6s;
+}
+
+.main_list_socialMedia .discord {
+  cursor: not-allowed;
+}
+
+.main_list_socialMedia .discord b {
+  cursor: auto;
+}
+
+.main_list_socialMedia a:hover,
+.main_list_socialMedia .discord:hover {
+  background-color: #22ddd233;
+  transform: translate(-5px, 5px);
+  box-shadow: -3px 3px 2px #fff9;
+  transition: transform .8s, box-shadow .5s ease-in-out;
+}
+
+.main_list_socialMedia i {
+  margin-right: .3em;
+}
+
+.main_list_socialMedia p::selection {
+  background-color: var(--color-secundary);
+}
+
+.footer {
+  background-color: transparent;
+  padding: 3em 0;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  border: 4px solid var(--color-primary);
+  border-bottom: transparent;
+  text-shadow: 2px 2px 5px #000;
+  box-shadow: 0 0 10px #000;
+  transition: background-color .6s;
+  background-color: #0009;
+
+}
+
+.footer-title {
+  font-size: 2em;
+  color: #fff;
+  filter: drop-shadow(.5px .5px 1px #fff9);
+}
+
+.footer-title a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-title a:hover {
+  transition: color .5s;
+  color: #12c0b299;
+}
+
+/* 400px / 16 px = 25em */
+@media screen and (min-width: 25em) {
+  .aumentar-diminuir {
+    transform: translateY(120px) scale(200%);
+  }
+}
+
+/* 700px / 16px = 43.75em */
+@media screen and (min-width: 43.75em) {
+  .aumentar-diminuir {
+    transform: translateY(120px) scale(250%);
+    margin-top: 1em;
+  }
+}
+
+/* 700px / 16px = 43.75em */
+@media screen and (min-width: 43.75em) {
+
+  .main_socialMedia-title {
+    font-size: 1.5em;
+  }
+}
+
+/* 1124px / 16px = 70.25em */
+@media screen and (min-width: 70.25em) {
+
+  .header_foto-perfil {
+    transition: transform 1s, margin-top 1s;
+  }
+
+  .main_list_socialMedia a,
+  .main_list_socialMedia p {
+    font-size: 2.5em;
+  }
+}
+
+@keyframes mexer {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
